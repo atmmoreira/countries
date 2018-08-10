@@ -1,302 +1,190 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Imigração PORTUGAL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto Imigração</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-tooltip.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
-
-            <h1 class="m_top text-center"> PROJETO: IMIGRAÇÃO PORTUGAL 2019/2020 - CASAL </h1>
-            <div class="col-md-12 text-center  alert alert-info">
-                <div class="row">
-                    <div class="col-md-3">
-                        <b>ATUALIZADO</b>: 12/06/2018
-                    </div>
-                    <div class="col-md-3">
-                        <b>GASTOS INICIAIS: R$
-                            <span class="totalGastos"></span>
-                        </b>
-                    </div>
-                    <div class="col-md-3">
-                        <p>
-                            <b>SALARIO LIQUIDO: €
-                                <span>1.500,00</span>
-                            </b>
-                        </p>
-                        <p>
-                            <b>GASTOS MENSAIS: €
-                                <span class="gastosMensais"></span>
-                            </b>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <b>COTAÇÃO</b>:
-                        <div class="label label-success">R$
-                            <span class="info"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <ul class="list-group">
-                    <li class="list-group-item active text-center"> GASTOS INICIAIS</li>
-                    <li class="list-group-item">
-                        Aluguel + Depósito (12x 500)
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="gi_cad0">6000</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="gi_r0"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Passagem Casal
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="gi_cad1">2000</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="gi_r1"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Passaporte / Visto
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="gi_cad2">500</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="gi_r2"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Mel
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="gi_cad3">600</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="gi_r3"></span>
-                            </div>
-                        </span>
-                    </li>
-
-                    <li class="list-group-item">
-                        Carro
-                        <small>
-                            (
-                            <abbr title="Entrada / Carro Usado">2000</abbr> +
-                            <abbr title="IUC 1x">150</abbr> +
-                            <abbr title="Transferencias e Outros">150</abbr> +
-                            <abbr title="Seguro Anual">300</abbr>
-                            )
-                        </small>
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="gi_cad4">2600</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="gi_r4"></span>
-                            </div>
-                        </span>
-                    </li>
-
-                    <li class="list-group-item">
-                        Total
-                        <span class="pull-right">
-                            <div class="label label-info">R$
-                                <span class="gi_rtotal"></span>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <ul class="list-group">
-                    <li class="list-group-item active text-center"> DIVERSOS I </li>
-                    <li class="list-group-item">
-                        Notebook - €4000
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="cc_cad0">0</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="cc_r0"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Celulares - €1000
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="cc_cad1">0</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="cc_r1"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Roupas
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="cc_cad2">1000</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="cc_r2"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        --
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="cc_cad3">0</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="cc_r3"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        --
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="cc_cad4">0</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="cc_r4"></span>
-                            </div>
-                        </span>
-                    </li>
-
-                    <li class="list-group-item">
-                        Total
-                        <span class="pull-right">
-                            <div class="label label-info">R$
-                                <span class="cc_rtotal"></span>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <ul class="list-group">
-                    <li class="list-group-item active text-center"> GASTOS MENSAIS </li>
-                    <li class="list-group-item">
-                        Aluguel
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad0">500</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r0"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Luz / Gás / Água
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad1">100</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r1"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Tv / Net / Fixo / Celular
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad2">100</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r2"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Seguro / Plano de Saúde
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad3" 1q>150</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r3"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Supermercado
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad4">200</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r4"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Carro / Gasolina (
-                        <abbr title="Parcela Mensal">100</abbr> +
-                        <abbr title="Gasolina Média">200</abbr>
-                        )
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad5">300</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r5"></span>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        Lazer
-                        <span class="pull-right">
-                            <div class="label label-danger">€
-                                <span class="mr_cad6">0</span>
-                            </div>
-                            <div class="label label-success">R$
-                                <span class="mr_r6"></span>
-                            </div>
-                        </span>
-                    </li>
-
-                    <li class="list-group-item">
-                        Total
-                        <span class="pull-right">
-                            <div class="label label-info">R$
-                                <span class="mr_rtotal"></span>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
+  <section class="hero is-link is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-centered"> PROJETO: IMIGRAÇÃO PORTUGAL 2019/2020 - CASAL </h1>
+        <div class="columns">
+          <div class="column">
+            <h2 class="subtitle"> Atualização: 10/08/2018
+              <br> Gastos Iniciais: R$
+              <span class="gastos_iniciais"></span>
+            </h2>
+          </div>
+          <div class="column">
+            <h2 class="subtitle is-pulled-right"> Cotação do Dia: <span class="cotacao"></span>
+              <br> Gastos Mensais: €
+              <span class="gastos_mensais"></span>
+            </h2>
+          </div>
         </div>
+      </div>
     </div>
+  </section>
+  <section class=" margin_top_10">
+    <div class="container">
+      <div class="columns">
+        <!-- GASTOS INICIAIS -->
+        <div class="column">
+          <a class="button is-medium is-fullwidth is-danger">GASTOS INICIAIS</a>
 
-    <!-- Javascript -->
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/calculos.js" type="text/javascript"></script>
+          <div class="level margin_top_10">
+            <div class="column is-size-7 is-three-fifths border">Aluguel / Depósito</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gi01_euro">6000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi01_real"></span> </div>
+          </div>
 
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Passagens Aéreas</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gi02_euro">2000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi02_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Passaporte e Vistos</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gi03_euro">500</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi03_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Roupas</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gi04_euro">1000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi04_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Pet - [MEL]</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gi05_euro">600</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi05_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Carro
+              <small>
+                (
+                  <span class="tooltip" data-tooltip="Entrada / Carro Usado">2000</span> +
+                  <span class="tooltip" data-tooltip="IUC 1x">150</span> +
+                  <span class="tooltip" data-tooltip="Transferencias e Outros">150</span> +
+                  <span class="tooltip" data-tooltip="Seguro Anual">300<span>
+                )
+              </small>
+            </div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gi06_euro">2600</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi06_real"></span> </div>
+          </div>
+
+          <!--
+
+            Copiar este trecho realizando a alteração abaixo:
+            - Basta trocar o N para o numero consecutivo, e acrescentar no js
+
+            <div class="level margin_top_2">
+              <div class="column is-size-7 is-three-fifths border"> NOME DO ITEM </div>
+              <div class="column is-size-7 has-text-centered border"> € <span class="gin_euro"> VALOR </span> </div>
+              <div class="column is-size-7 has-text-centered border"> R$ <span class="gin_real"></span> </div>
+            </div>
+
+          -->
+
+          <!-- Footer -->
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-gray is-three-fifths border">TOTAL DE GASTOS INCIAIS</div>
+            <div class="column is-size-7 is-gray has-text-centered border"> € <span class="gitotal_euro"></span> </div>
+            <div class="column is-size-7 is-gray has-text-centered border"> R$ <span class="gitotal_real"></span> </div>
+          </div>
+          <!-- Footer -->
+
+        </div>
+        <!-- GASTOS INICIAIS -->
+        <!-- GASTOS MENSAIS -->
+        <div class="column">
+          <a class="button is-medium is-fullwidth is-primary">GASTOS MENSAIS</a>
+
+          <div class="level margin_top_10">
+            <div class="column is-size-7 is-three-fifths border">Aluguel</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm01_euro">500</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm01_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Água / Luz / Gás</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm02_euro">100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm02_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Tv / Net / Fixo / Celular</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm03_euro">100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm03_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Seguro / Plano de Saúde</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm04_euro">150</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm04_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Supermercado</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm05_euro">200</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm05_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Carro Prestação / Gasolina ( 100 + 200 )</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm06_euro">300</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm06_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Lazer</div>
+            <div class="column is-size-7 has-text-centered border"> € <span class="gm07_euro">100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm07_real"></span> </div>
+          </div>
+
+          <!--
+
+            Copiar este trecho realizando a alteração abaixo:
+            - Basta trocar o N para o numero consecutivo, e acrescentar no js
+
+            <div class="level margin_top_2">
+              <div class="column is-size-7 is-three-fifths border"> NOME DO ITEM </div>
+              <div class="column is-size-7 has-text-centered border"> € <span class="gmn_euro"> VALOR </span> </div>
+              <div class="column is-size-7 has-text-centered border"> R$ <span class="gmn_real"></span> </div>
+            </div>
+
+          -->
+
+          <!-- Footer -->
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-gray is-three-fifths border">Total de Gastos Mensais</div>
+            <div class="column is-size-7 is-gray has-text-centered border"> € <span class="gmtotal_euro"></span> </div>
+            <div class="column is-size-7 is-gray has-text-centered border"> R$ <span class="gmtotal_real"></span> </div>
+          </div>
+          <!-- Footer -->
+
+        </div>
+        <!-- GASTOS MENSAIS -->
+      </div>
+    </div>
+  </section>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/calculos.js"></script>
 </body>
 
 </html>
