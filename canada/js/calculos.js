@@ -1,142 +1,105 @@
  $(document).ready(function(){
 
-    var url = "https://economia.awesomeapi.com.br/json/all";
+    const url = "https://economia.awesomeapi.com.br/json/all";
 
     $.getJSON( url, function( data ) {
 
         // Formatação Número Real
             function formata(num) {
-                var p = num.toFixed(2).split(".");
+                let p = num.toFixed(2).split(".");
                 return "" + p[0].split("").reverse().reduce(function(acc, num, i, orig) {
                     return  num + (i && !(i % 3) ? "." : "") + acc;
                 }, "") + "," + p[1];
             }
 
         // Cotação Dollar CAD
-            var cotacao = data.CAD.ask;
-            $('.info').html( cotacao );
+            let cotacao = data.CAD.ask;
+            $('.cotacao').html(cotacao);
 
         // Gastos Iniciais
-            var gi0 = $('.label').find('.gi_cad0').text();
-            var gi_calc0 = gi0 * cotacao;
-            $('.gi_r0').html( formata( gi_calc0 ) );
+            let gi_cad01 = $('.gi01_cad').text();
+            let gi_real01 = gi_cad01  * cotacao;
+            $('.gi01_real').html( formata( gi_real01 ) );
 
-            var gi1 = $('.label').find('.gi_cad1').text();
-            var gi_calc1 = gi1 * cotacao;
-            $('.gi_r1').html( formata( gi_calc1 ) );
+            let gi_cad02 = $('.gi02_cad').text();
+            let gi_real02 = gi_cad02  * cotacao;
+            $('.gi02_real').html( formata( gi_real02 ) );
 
-            var gi2 = $('.label').find('.gi_cad2').text();
-            var gi_calc2 = gi2 * cotacao;
-            $('.gi_r2').html( formata( gi_calc2 ) );
+            let gi_cad03 = $('.gi03_cad').text();
+            let gi_real03 = gi_cad03  * cotacao;
+            $('.gi03_real').html( formata( gi_real03 ) );
 
-            var gi3 = $('.label').find('.gi_cad3').text();
-            var gi_calc3 = gi3 * cotacao;
-            $('.gi_r3').html( formata( gi_calc3 ) );
+            let gi_cad04 = $('.gi04_cad').text();
+            let gi_real04 = gi_cad04  * cotacao;
+            $('.gi04_real').html( formata( gi_real04 ) );
 
-            var gi4 = $('.label').find('.gi_cad4').text();
-            var gi_calc4 = gi4 * cotacao;
-            $('.gi_r4').html( formata( gi_calc4 ) );
+            let gi_cad05 = $('.gi05_cad').text();
+            let gi_real05 = gi_cad05  * cotacao;
+            $('.gi05_real').html( formata( gi_real05 ) );
 
-            var total_gi = gi_calc0 + gi_calc1 + gi_calc2 + gi_calc3 + gi_calc4;
-            $('.gi_rtotal').html( formata( total_gi ) );
+            let gi_cad06 = $('.gi06_cad').text();
+            let gi_real06 = gi_cad06  * cotacao;
+            $('.gi06_real').html( formata( gi_real06 ) );
 
-        // College / Cursos
-            var cc0 = $('.label').find('.cc_cad0').text();
-            var cc_calc0 = cc0 * cotacao;
-            $('.cc_r0').html( formata( cc_calc0 ) );
+            let gi_cad07 = $('.gi07_cad').text();
+            let gi_real07 = gi_cad07  * cotacao;
+            $('.gi07_real').html( formata( gi_real07 ) );
 
-            var cc1 = $('.label').find('.cc_cad1').text();
-            var cc_calc1 = cc1 * cotacao;
-            $('.cc_r1').html( formata( cc_calc1 ) );
+            let gi_cad08 = $('.gi08_cad').text();
+            let gi_real08 = gi_cad08  * cotacao;
+            $('.gi08_real').html( formata( gi_real08 ) );
 
-            var cc2 = $('.label').find('.cc_cad2').text();
-            var cc_calc2 = cc2 * cotacao;
-            $('.cc_r2').html( formata( cc_calc2 ) );
+            let gi_cad09 = $('.gi09_cad').text();
+            let gi_real09 = gi_cad09  * cotacao;
+            $('.gi09_real').html( formata( gi_real09 ) );
 
-            var cc3 = $('.label').find('.cc_cad3').text();
-            var cc_calc3 = cc3 * cotacao;
-            $('.cc_r3').html( formata( cc_calc3 ) );
+            let totalcad = Number(gi_cad01) + Number(gi_cad02) + Number(gi_cad03) + Number(gi_cad04)
+            + Number(gi_cad05) + Number(gi_cad06) + Number(gi_cad07) + Number(gi_cad08) + Number(gi_cad09);
+            $('.gitotal_cad').html( totalcad );
 
-            var cc4 = $('.label').find('.cc_cad4').text();
-            var cc_calc4 = cc4 * cotacao;
-            $('.cc_r4').html( formata( cc_calc4 ) );
+            let totalReal = gi_real01 + gi_real02 + gi_real03 + gi_real04 + gi_real05 + gi_real06 + gi_real07 + gi_real08 + gi_real09;
+            $('.gitotal_real').html( formata( totalReal ) );
+            $('.gastos_iniciais').html( formata( totalReal ) );
 
-            var total_cc = cc_calc0 + cc_calc1 + cc_calc2 + cc_calc3 + cc_calc4;
-            $('.cc_rtotal').html( formata( total_cc ) );
+        // Gastos Mensais
+            let gm_cad01 = $('.gm01_cad').text();
+            let gm_real01 = gm_cad01  * cotacao;
+            $('.gm01_real').html( formata( gm_real01 ) );
 
-        // Moradia
-            var mr0 = $('.label').find('.mr_cad0').text();
-            var mr_calc0 = mr0 * cotacao;
-            $('.mr_r0').html( formata( mr_calc0 ) );
+            let gm_cad02 = $('.gm02_cad').text();
+            let gm_real02 = gm_cad02  * cotacao;
+            $('.gm02_real').html( formata( gm_real02 ) );
 
-            var mr1 = $('.label').find('.mr_cad1').text();
-            var mr_calc1 = mr1 * cotacao;
-            $('.mr_r1').html( formata( mr_calc1 ) );
+            let gm_cad03 = $('.gm03_cad').text();
+            let gm_real03 = gm_cad03  * cotacao;
+            $('.gm03_real').html( formata( gm_real03 ) );
 
-            var mr2 = $('.label').find('.mr_cad2').text();
-            var mr_calc2 = mr2 * cotacao;
-            $('.mr_r2').html( formata( mr_calc2 ) );
+            let gm_cad04 = $('.gm04_cad').text();
+            let gm_real04 = gm_cad04  * cotacao;
+            $('.gm04_real').html( formata( gm_real04 ) );
 
-            var mr3 = $('.label').find('.mr_cad3').text();
-            var mr_calc3 = mr3 * cotacao;
-            $('.mr_r3').html( formata( mr_calc3 ) );
+            let gm_cad05 = $('.gm05_cad').text();
+            let gm_real05 = gm_cad05  * cotacao;
+            $('.gm05_real').html( formata( gm_real05 ) );
 
-            var mr4 = $('.label').find('.mr_cad4').text();
-            var mr_calc4 = mr4 * cotacao;
-            $('.mr_r4').html( formata( mr_calc4 ) );
+            let gm_cad06 = $('.gm06_cad').text();
+            let gm_real06 = gm_cad06  * cotacao;
+            $('.gm06_real').html( formata( gm_real06 ) );
 
-            var mr5 = $('.label').find('.mr_cad5').text();
-            var mr_calc5 = mr5 * cotacao;
-            $('.mr_r5').html( formata( mr_calc5 ) );
+            let gm_cad07 = $('.gm07_cad').text();
+            let gm_real07 = gm_cad07  * cotacao;
+            $('.gm07_real').html( formata( gm_real07 ) );
 
-            var mr6 = $('.label').find('.mr_cad6').text();
-            var mr_calc6 = mr6 * cotacao;
-            $('.mr_r6').html( formata( mr_calc6 ) );
+            let gm_cad08 = $('.gm08_cad').text();
+            let gm_real08 = gm_cad08  * cotacao;
+            $('.gm08_real').html( formata( gm_real08 ) );
 
-            var total_mr = mr_calc0 + mr_calc1 + mr_calc2 + mr_calc3 + mr_calc4 + mr_calc5 + mr_calc6;
-            $('.mr_rtotal').html( formata( total_mr ) );
+            let totalcadGm = Number(gm_cad01) + Number(gm_cad02) + Number(gm_cad03) + Number(gm_cad04) + Number(gm_cad05) + Number(gm_cad06) + Number(gm_cad07) + Number(gm_cad08);
+            $('.gmtotal_cad').html( totalcadGm );
+            $('.gastos_mensais').html( formata( totalcadGm ) );
 
-        // Diversos
-            var dv0 = $('.label').find('.dv_cad0').text();
-            var dv_calc0 = dv0 * cotacao;
-            $('.dv_r0').html( formata( dv_calc0 ) );
-
-            var dv1 = $('.label').find('.dv_cad1').text();
-            var dv_calc1 = dv1 * cotacao;
-            $('.dv_r1').html( formata( dv_calc1 ) );
-
-            var dv2 = $('.label').find('.dv_cad2').text();
-            var dv_calc2 = dv2 * cotacao;
-            $('.dv_r2').html( formata( dv_calc2 ) );
-
-            var dv3 = $('.label').find('.dv_cad3').text();
-            var dv_calc3 = dv3 * cotacao;
-            $('.dv_r3').html( formata( dv_calc3 ) );
-
-            var dv4 = $('.label').find('.dv_cad4').text();
-            var dv_calc4 = dv4 * cotacao;
-            $('.dv_r4').html( formata( dv_calc4 ) );
-
-            var dv5 = $('.label').find('.dv_cad5').text();
-            var dv_calc5 = dv5 * cotacao;
-            $('.dv_r5').html( formata( dv_calc5 ) );
-
-            var dv6 = $('.label').find('.dv_cad6').text();
-            var dv_calc6 = dv6 * cotacao;
-            $('.dv_r6').html( formata( dv_calc6 ) );
-
-            var total_dv = dv_calc0 + dv_calc1 + dv_calc2 + dv_calc3 + dv_calc4 + dv_calc5 + dv_calc6;
-            $('.dv_rtotal').html( formata( total_dv ) );
-
-        // Total Mensal
-            var somaMensal = mr_calc5 + mr_calc6 + dv_calc0 + dv_calc1 + dv_calc2 + dv_calc3 + dv_calc4 + dv_calc5;
-            var tm = somaMensal / cotacao;
-            $('.gastosMensais').html( formata( tm ) );
-
-        // Total de Valores em Reais
-            var total = total_gi + total_cc + total_mr + total_dv;
-            $('.totalGastos').html( formata( total ) );
+            let totalRealGm = gm_real01 + gm_real02 + gm_real03 + gm_real04 + gm_real05 + gm_real06 + gm_real07 + gm_real08;
+            $('.gmtotal_real').html( formata( totalRealGm ) );
 
     });
-
 });

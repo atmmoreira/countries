@@ -1,33 +1,205 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Imigração Canadá</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto Imigração</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-tooltip.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <h1 class="m_top text-center"> ESCOLHA UMA PLANILHA </h1>
-            <div class="col-md-12 text-center m_top">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <a href="index_casado.html" class="btn btn-danger btn-lg btn-flat">Planilha Casado</a>
-                        <a href="index_solteiro.html" class="btn btn-primary btn-lg btn-flat">Planilha Solteiro</a>
-                    </div>
-                </div>
-            </div>
+  <section class="hero is-link is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-centered"> PROJETO: IMIGRAÇÃO CANADÁ 2019/2020 - CASAL </h1>
+        <div class="columns">
+          <div class="column">
+            <h2 class="subtitle"> Atualização: 10/08/2018
+              <br> Gastos Iniciais: R$
+              <span class="gastos_iniciais"></span>
+            </h2>
+          </div>
+          <div class="column">
+            <h2 class="subtitle is-pulled-right"> Cotação do Dia: <span class="cotacao"></span>
+              <br> Gastos Mensais: CAD
+              <span class="gastos_mensais"></span>
+            </h2>
+          </div>
         </div>
+      </div>
     </div>
+  </section>
+  <section class=" margin_top_10">
+    <div class="container">
+      <div class="columns">
+        <!-- GASTOS INICIAIS -->
+        <div class="column">
+          <a class="button is-medium is-fullwidth is-danger">GASTOS INICIAIS</a>
 
-    <!-- Javascript -->
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/calculos.js" type="text/javascript"></script>
+          <div class="level margin_top_10">
+            <div class="column is-size-7 is-three-fifths border">Aluguel / Depósito (Comprovação de Renda)</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi01_cad">16800</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi01_real"></span> </div>
+          </div>
 
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Passagens Aéreas</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi02_cad">2000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi02_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Passaporte, Vistos e Exames Médicos</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi03_cad">1500</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi03_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Roupas</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi04_cad">1000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi04_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Pet - [MEL]</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi05_cad">300</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi05_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Carro</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi06_cad">4000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi06_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Mobília + Notebook</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi07_cad">8000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi07_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Curso de Idiomas (Pathway) + Material</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi08_cad">5000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi08_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">College + Tradução Juramentada</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gi09_cad">27000</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gi09_real"></span> </div>
+          </div>
+
+          <!--
+
+            Copiar este trecho realizando a alteração abaixo:
+            - Basta trocar o N para o numero consecutivo, e acrescentar no js
+
+            <div class="level margin_top_2">
+              <div class="column is-size-7 is-three-fifths border"> NOME DO ITEM </div>
+              <div class="column is-size-7 has-text-centered border"> CAD <span class="gin_cad"> VALOR </span> </div>
+              <div class="column is-size-7 has-text-centered border"> R$ <span class="gin_real"></span> </div>
+            </div>
+
+          -->
+
+          <!-- Footer -->
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-gray is-three-fifths border">TOTAL DE GASTOS INCIAIS</div>
+            <div class="column is-size-7 is-gray has-text-centered border"> CAD <span class="gitotal_cad"></span> </div>
+            <div class="column is-size-7 is-gray has-text-centered border"> R$ <span class="gitotal_real"></span> </div>
+          </div>
+          <!-- Footer -->
+
+        </div>
+        <!-- GASTOS INICIAIS -->
+        <!-- GASTOS MENSAIS -->
+        <div class="column">
+          <a class="button is-medium is-fullwidth is-primary">GASTOS MENSAIS</a>
+
+          <div class="level margin_top_10">
+            <div class="column is-size-7 is-three-fifths border">Aluguel</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm01_cad">1100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm01_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Água / Luz / Gás / Aquecimento</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm02_cad">140</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm02_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Tv / Net / Fixo / Celular</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm03_cad">100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm03_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Seguro / Plano de Saúde</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm04_cad">200</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm04_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Supermercado</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm05_cad">500</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm05_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Carro Prestação / Gasolina ( 100 + 200 )</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm06_cad">300</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm06_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Lazer</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm07_cad">100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm07_real"></span> </div>
+          </div>
+
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-three-fifths border">Pet - [MEL]</div>
+            <div class="column is-size-7 has-text-centered border"> CAD <span class="gm08_cad">100</span> </div>
+            <div class="column is-size-7 has-text-centered border"> R$ <span class="gm08_real"></span> </div>
+          </div>
+
+          <!--
+
+            Copiar este trecho realizando a alteração abaixo:
+            - Basta trocar o N para o numero consecutivo, e acrescentar no js
+
+            <div class="level margin_top_2">
+              <div class="column is-size-7 is-three-fifths border"> NOME DO ITEM </div>
+              <div class="column is-size-7 has-text-centered border"> CAD <span class="gmn_cad"> VALOR </span> </div>
+              <div class="column is-size-7 has-text-centered border"> R$ <span class="gmn_real"></span> </div>
+            </div>
+
+          -->
+
+          <!-- Footer -->
+          <div class="level margin_top_2">
+            <div class="column is-size-7 is-gray is-three-fifths border">Total de Gastos Mensais</div>
+            <div class="column is-size-7 is-gray has-text-centered border"> CAD <span class="gmtotal_cad"></span> </div>
+            <div class="column is-size-7 is-gray has-text-centered border"> R$ <span class="gmtotal_real"></span> </div>
+          </div>
+          <!-- Footer -->
+
+        </div>
+        <!-- GASTOS MENSAIS -->
+      </div>
+    </div>
+  </section>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/calculos.js"></script>
 </body>
+
 </html>
